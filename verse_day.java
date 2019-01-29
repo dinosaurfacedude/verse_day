@@ -117,8 +117,26 @@ public class verse_day extends Application{
         case 1:
           verse = "In the beginning, God made the Heavens and the Earth. \nGenesis 1:1 (KJV)";
           break;
+
         case 2:
           verse = "For unto us a child is born, unto us a son is given.\nAnd the weight of the world shall be on His shoulder. \nAnd His name shall be called Wonderful, Counsellor, \nthe Almighty God, Everlasting Father, Prince of Peace. \nIsaiah 9:6 (KJV)";
+        break;
+
+        case 3:
+          verse = "Then Peter said unto them, Repent, and be baptized \nevery one of you in the name of Jesus Christ for the \nremission of sins, and ye shall receive the gift of the Holy Ghost. \nActs 2:38 (KJV)";
+        break;
+
+        case 4:
+          verse = "For God so loved the world, that he gave his only begotten Son, \nthat whosoever believeth in him should not perish, \nbut have everlasting life. \nJohn 3:16 (KJV)";
+        break;
+
+        case 5:
+          verse = "Let no man despise thy youth; but be thou an example \nof the believers, in word, in conversation, in charity, \nin spirit, in faith, in purity. \n1 Timothy 4:12 (KJV)";
+        break;
+
+        case 6:
+          verse = "For I know the thoughts that I think toward you, \nsaith the LORD, thoughts of peace, and not of evil, \nto give you an expected end. \nJeremiah 29:11 (KJV)";
+        break;
       }
 
       return verse;
