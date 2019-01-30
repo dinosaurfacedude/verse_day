@@ -8,18 +8,18 @@ It reads from a text file to get a randomly generated number from 1-365, and
 it then displays a Bible verse based off of that number in JavaFX.
 */
 
-
+import javafx.scene.image.*;
 import java.util.*;
 import java.io.*;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
-import javafx.scene.text.*;
 import javafx.scene.control.*;
 import java.lang.System;
+import javafx.scene.text.*;
 public class verse_day extends Application{
 
 
@@ -38,17 +38,28 @@ public class verse_day extends Application{
       int day = getDay();
       String theVerse = new String();
       theVerse = whichVerse(day);
+      Image background = new Image("cross_II.png");
 
+      ImageView iv = new ImageView();
+      iv.setImage(background);
       Button exitb = new Button("Go forth");
       exitb.setLayoutX(200);
-      exitb.setLayoutY(300);
+      exitb.setLayoutY(400);
+
+      iv.setLayoutX(42);
       Pane window = new Pane();
       Text verseShow = new Text(75, 200, theVerse);
+
+      //exit button. Prettier than just having nothing
       exitb.setOnAction(e -> {System.exit(0);
       }
       );
+
+      window.getChildren().add(iv);
       window.getChildren().add(verseShow);
       window.getChildren().add(exitb);
+
+      //window.getChildren().add(myBackground);
       Scene scene = new Scene(window, 500, 500);
       primaryStage.setTitle("Bible Verse Of The Day");
       primaryStage.setScene(scene);
@@ -97,7 +108,7 @@ public class verse_day extends Application{
       File newDay = new File("days.txt");
       PrintWriter output = new PrintWriter(newDay);
       System.out.println("writing...");
-      output.print(1);
+      output.print(2);
 
 
       //close the door for your mama
@@ -110,6 +121,8 @@ public class verse_day extends Application{
 
     }
 
+
+    //These are the verses that are used
     private static String whichVerse(int theVerse){
       String verse = new String();
       switch(theVerse){
@@ -144,12 +157,13 @@ public class verse_day extends Application{
 
 
     //This updates to the next day. That way, the program doesn't just show the
-    //same verse over and over again.
+    //same verse over and over again. Chosen randomly.
     private static void updateDay(int theDay)throws IOException{
-
+      Random myNewDay = new Random();
+      theDay = myNewDay.nextInt(5) + 1;
       File day = new File("days.txt");
       PrintWriter output = new PrintWriter(day);
-      output.print(theDay + 1);
+      output.print(theDay);
 
       //close the door for your mama
       output.close();
