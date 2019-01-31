@@ -8,6 +8,7 @@ It reads from a text file to get a randomly generated number from 1-365, and
 it then displays a Bible verse based off of that number in JavaFX.
 */
 
+import javafx.scene.text.*;
 import javafx.scene.image.*;
 import java.util.*;
 import java.io.*;
@@ -49,7 +50,7 @@ public class verse_day extends Application{
       iv.setLayoutX(42);
       Pane window = new Pane();
       Text verseShow = new Text(75, 200, theVerse);
-
+      verseShow.setFont(Font.font("baskerville"));
       //exit button. Prettier than just having nothing
       exitb.setOnAction(e -> {System.exit(0);
       }
@@ -150,6 +151,47 @@ public class verse_day extends Application{
         case 6:
           verse = "For I know the thoughts that I think toward you, \nsaith the LORD, thoughts of peace, and not of evil, \nto give you an expected end. \nJeremiah 29:11 (KJV)";
         break;
+
+        case 7:
+          verse = "The name of the Lord is a strong tower:\nthe righteous runneth into it, and is safe. \nProverbs 18:10 (KJV)";
+        break;
+
+        case 8:
+          verse = "For the ways of man are before the eyes of \nthe Lord, and he pondereth all his goings.\nProverbs 5:21 (KJV)";
+        break;
+
+        case 9:
+          verse = "Be of good courage, and he shall strengthen \nyour heart, all ye that hope in the LORD.\n Psalms 31:24 (KJV)";
+        break;
+
+        case 10:
+          verse = "But God commendeth his love toward us,\nin that, while we were yet sinners, Christ died for us.\nRomans 5:8 (KJV)";
+        break;
+
+        case 11:
+          verse = "For the wages of sin is death;\n but the gift of God is eternal life through Jesus Christ our Lord.\n Romans 6:23 (KJV)";
+        break;
+
+        case 12:
+          verse = "A good name is rather to be chosen than great riches, \nand loving favour rather than silver and gold. \nThe rich and poor meet together: \nthe Lord is the maker of them all. \nProverbs 22:1-2 (KJV)";
+        break;
+
+        case 13:
+          verse = "Pleasant words are as an honeycomb, sweet to the soul, \nand health to the bones. \nProverbs 16:24 (KJV)";
+        break;
+
+        case 14:
+          verse = "Be not forgetful to entertain strangers: \nfor thereby some have entertained angels unawares.\nHebrews 13:2 (KJV)";
+        break;
+
+        case 15:
+          verse = "For by grace are ye saved through faith;\n and that not of yourselves: it is the gift of God \nEphesians 2:8 (KJV)";
+        break;
+
+        case 16:
+          verse = "But if ye forgive not men their trespasses,\nneither will your Father forgive your trespasses.\nMatthew 6:15 (KJV)";
+        break;
+
       }
 
       return verse;
@@ -157,10 +199,13 @@ public class verse_day extends Application{
 
 
     //This updates to the next day. That way, the program doesn't just show the
-    //same verse over and over again. Chosen randomly.
+    //same verse over and over again.
     private static void updateDay(int theDay)throws IOException{
-      Random myNewDay = new Random();
-      theDay = myNewDay.nextInt(5) + 1;
+
+      theDay = theDay + 1;
+      if(theDay > 16){
+        theDay = 1;
+      }
       File day = new File("days.txt");
       PrintWriter output = new PrintWriter(day);
       output.print(theDay);
