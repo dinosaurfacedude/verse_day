@@ -44,13 +44,14 @@ public class verse_day extends Application{
       ImageView iv = new ImageView();
       iv.setImage(background);
       Button exitb = new Button("Go forth");
-      exitb.setLayoutX(200);
+      exitb.setLayoutX(165);
       exitb.setLayoutY(400);
 
-      iv.setLayoutX(42);
+      
       Pane window = new Pane();
-      Text verseShow = new Text(75, 200, theVerse);
-      verseShow.setFont(Font.font("baskerville"));
+      Text verseShow = new Text(45, 155, theVerse);
+      verseShow.setFont(Font.font("Baskerville Old Face", 20));
+      
       //exit button. Prettier than just having nothing
       exitb.setOnAction(e -> {System.exit(0);
       }
@@ -61,7 +62,7 @@ public class verse_day extends Application{
       window.getChildren().add(exitb);
 
       //window.getChildren().add(myBackground);
-      Scene scene = new Scene(window, 500, 500);
+      Scene scene = new Scene(window, 400, 500);
       primaryStage.setTitle("Bible Verse Of The Day");
       primaryStage.setScene(scene);
       primaryStage.show();
@@ -129,27 +130,27 @@ public class verse_day extends Application{
       switch(theVerse){
 
         case 1:
-          verse = "In the beginning, God made the Heavens and the Earth. \nGenesis 1:1 (KJV)";
+          verse = "In the beginning, God made the Heavens \nand the Earth. \nGenesis 1:1 (KJV)";
           break;
 
         case 2:
-          verse = "For unto us a child is born, unto us a son is given.\nAnd the weight of the world shall be on His shoulder. \nAnd His name shall be called Wonderful, Counsellor, \nthe Almighty God, Everlasting Father, Prince of Peace. \nIsaiah 9:6 (KJV)";
+          verse = "For unto us a child is born, unto us \na son is given.And the weight of\n the world shall be on His shoulder. \nAnd His name shall be called \nWonderful, Counsellor, the Almighty God,\nEverlasting Father, Prince of Peace. \nIsaiah 9:6 (KJV)";
         break;
 
         case 3:
-          verse = "Then Peter said unto them, Repent, and be baptized \nevery one of you in the name of Jesus Christ for the \nremission of sins, and ye shall receive the gift of the Holy Ghost. \nActs 2:38 (KJV)";
+          verse = "Then Peter said unto them, Repent, \nand be baptized every one of you in \nthe name of Jesus Christ for the \nremission of sins, and ye shall receive\n the gift of the Holy Ghost. \nActs 2:38 (KJV)";
         break;
 
         case 4:
-          verse = "For God so loved the world, that he gave his only begotten Son, \nthat whosoever believeth in him should not perish, \nbut have everlasting life. \nJohn 3:16 (KJV)";
+          verse = "For God so loved the world, that he gave \nHis only begotten Son, that whosoever \nbelieveth in him should not perish, \nbut have everlasting life. \nJohn 3:16 (KJV)";
         break;
 
         case 5:
-          verse = "Let no man despise thy youth; but be thou an example \nof the believers, in word, in conversation, in charity, \nin spirit, in faith, in purity. \n1 Timothy 4:12 (KJV)";
+          verse = "Let no man despise thy youth;\nbut be thou an example of the believers, \nin word, in conversation, in charity, \nin spirit, in faith, in purity. \n1 Timothy 4:12 (KJV)";
         break;
 
         case 6:
-          verse = "For I know the thoughts that I think toward you, \nsaith the LORD, thoughts of peace, and not of evil, \nto give you an expected end. \nJeremiah 29:11 (KJV)";
+          verse = "For I know the thoughts that I think\n toward you, saith the LORD, \nthoughts of peace, and not of evil, \nto give you an expected end. \nJeremiah 29:11 (KJV)";
         break;
 
         case 7:
@@ -165,27 +166,27 @@ public class verse_day extends Application{
         break;
 
         case 10:
-          verse = "But God commendeth his love toward us,\nin that, while we were yet sinners, Christ died for us.\nRomans 5:8 (KJV)";
+          verse = "But God commendeth his love toward us,\nin that, while we were yet sinners, \nChrist died for us.\nRomans 5:8 (KJV)";
         break;
 
         case 11:
-          verse = "For the wages of sin is death;\n but the gift of God is eternal life through Jesus Christ our Lord.\n Romans 6:23 (KJV)";
+          verse = "For the wages of sin is death;\n but the gift of God is eternal life \nthrough Jesus Christ our Lord.\n Romans 6:23 (KJV)";
         break;
 
         case 12:
-          verse = "A good name is rather to be chosen than great riches, \nand loving favour rather than silver and gold. \nThe rich and poor meet together: \nthe Lord is the maker of them all. \nProverbs 22:1-2 (KJV)";
+          verse = "A good name is rather to be chosen than \ngreat riches, and loving favour rather than \nsilver and gold. \nThe rich and poor meet together: \nthe Lord is the maker of them all. \nProverbs 22:1-2 (KJV)";
         break;
 
         case 13:
-          verse = "Pleasant words are as an honeycomb, sweet to the soul, \nand health to the bones. \nProverbs 16:24 (KJV)";
+          verse = "Pleasant words are as an honeycomb, \nsweet to the soul, and health to the bones. \nProverbs 16:24 (KJV)";
         break;
 
         case 14:
-          verse = "Be not forgetful to entertain strangers: \nfor thereby some have entertained angels unawares.\nHebrews 13:2 (KJV)";
+          verse = "Be not forgetful to entertain strangers: \nfor thereby some have entertained \nangels unawares.\nHebrews 13:2 (KJV)";
         break;
 
         case 15:
-          verse = "For by grace are ye saved through faith;\n and that not of yourselves: it is the gift of God \nEphesians 2:8 (KJV)";
+          verse = "For by grace are ye saved through faith;\n and that not of yourselves: it is the gift of \nGod \nEphesians 2:8 (KJV)";
         break;
 
         case 16:
